@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="description" content="Open Source Strategy RPG for the browser">
         <link rel="stylesheet" href="styles/main.css">
+        <script type="text/javascript" src="scripts/htmlOperations.js"></script>
         <script type="text/javascript" src="scripts/game.js"></script>
         <title>Test</title>
     </head>
@@ -11,14 +12,16 @@
     
         <div id="menu">
         <ul>
-        <li><img src="images/health.png">Health</li>
-        <li><img src="images/stamina.png">Stamina</li>
-        <li><img src="images/inventory.png">Inventory</li>
+        <li id="health">Health: 0/0 (100%)</li>
+        <li id="stamina">Stamina: 0/0 (100%)</li>
+        <li class="clickable" id="inventory">Inventory</li>
+        <li class="clickable" id="perception">Look At</li>
         </ul>
         </div>
         
         <div id="board">
-        <table>
+        test
+        <table id="tiles">
         </table>
         </div>
         

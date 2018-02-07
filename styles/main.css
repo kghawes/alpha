@@ -7,30 +7,62 @@ body {
     color: #FFFFFF;
     margin: 0;
     padding: 0;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
+/* menu */
 
 div#menu {
     float: left;
-    background: red;
+    background: #000000;
 }
 
 div#menu ul, div#menu ul li {
     margin: 0;
     padding: 0;
     list-style-type: none;
+    font-weight: bold;
 }
 
-div#menu ul li img {
-    vertical-align: middle;
-    width: 50px;
-    height: 50px;
-    padding-right: 10px;
+div#menu ul li {
+    background-size: 30px;
+    background-repeat: no-repeat;
+    border-top: 2px solid #000000;
+    border-right: 2px solid #000000;
+    padding-left: 35px;
+    height: 30px;
+    line-height: 30px;
 }
+
+li#health {
+    background-image: url(../images/health.png);
+    background-color: #B40A57;
+}
+
+li#stamina {
+    background-image: url(../images/stamina.png);
+   background-color: #349E97;
+}
+
+li.clickable:hover {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+/* game board */
 
 div#board {
     width: 100%;
-    background: blue;
+    background: white;
 }
+
+/* text box */
 
 div#messages {
     width: 100%;
@@ -38,5 +70,5 @@ div#messages {
     float: left;
     overflow-x: hidden;
     overflow-y: scroll;
-    background: green;
+    background: #333333;
 }
