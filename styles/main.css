@@ -16,18 +16,25 @@ body {
     user-select: none;
 }
 
-/* menu */
-
-div#menu {
-    float: left;
-    background: #000000;
-}
-
-div#menu ul, div#menu ul li {
+ul, ul li {
     margin: 0;
     padding: 0;
     list-style-type: none;
     font-weight: bold;
+}
+
+table, table tr, table tr td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* menu */
+
+div#menu {
+    float: left;
+    background: #333333;
+    border: 1px solid #333333;
 }
 
 div#menu ul li {
@@ -36,6 +43,7 @@ div#menu ul li {
     border-top: 2px solid #000000;
     border-right: 2px solid #000000;
     padding-left: 35px;
+    padding-right: 5px;
     height: 30px;
     line-height: 30px;
 }
@@ -50,9 +58,55 @@ li#stamina {
    background-color: #349E97;
 }
 
-li.clickable:hover {
+li.clickable:hover, li#perceptionSelected, li#tradeSelected, li#sprintSelected {
     background: #FFFFFF;
     color: #000000;
+}
+
+li#inventory {
+    background-image: url(../images/inventory.png);
+}
+
+li#inventory:hover {
+    background-image: url(../images/inventory_hover.png);
+}
+
+li#perception {
+    background-image: url(../images/perception.png);
+}
+
+li#perception:hover, li#perceptionSelected {
+    background-image: url(../images/perception_hover.png);
+}
+
+li#trade {
+    background-image: url(../images/trade.png);
+}
+
+li#trade:hover, li#tradeSelected {
+    background-image: url(../images/trade_hover.png);
+}
+
+li#sprint {
+    background-image: url(../images/sprint.png);
+}
+
+li#sprint:hover, li#sprintSelected {
+    background-image: url(../images/sprint_hover.png);
+}
+
+/* inventory */
+
+table#items {
+    float: left;
+    border: 1px solid #333333;
+    background: #000000;
+}
+
+table#items tr td.equipped {
+    width: 30px;
+    height: 30px;
+    background: #333333;
 }
 
 /* game board */
@@ -71,4 +125,5 @@ div#messages {
     overflow-x: hidden;
     overflow-y: scroll;
     background: #333333;
+    border-top: 3px solid #000000;
 }

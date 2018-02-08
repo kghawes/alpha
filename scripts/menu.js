@@ -1,6 +1,6 @@
 var MENU = {
-    NONE : {unselectedId: "", selectedId: ""},
-    INVENTORY : {unselectedId: "inventory", selectedId: "inventorySelected"}, 
+    NONE: {unselectedId: "", selectedId: ""},
+    INVENTORY: {unselectedId: "inventory", selectedId: "inventorySelected"}, 
     PERCEPTION: {unselectedId: "perception", selectedId: "perceptionSelected"}
 };
 
@@ -32,8 +32,12 @@ function doSelectedOrCancel(event) {
     if (event.target.id == selectedMenuItem.selectedId) {
         return;
     }
-    if (selectedMenuItem != MENU.NONE) {
-        
+    switch(selectedMenuItem) {
+        case MENU.INVENTORY:
+            //code block
+            break;
+        case MENU.PERCEPTION:
+            gameActions.lookAt(event.target.id);
     }
     deselectMenuItem();
 }
@@ -50,6 +54,6 @@ function selectPerception() {
 
 window.onload = function() {
     
-setUpEventListeners();
+    setUpEventListeners();
 
 };

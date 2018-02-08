@@ -4,24 +4,50 @@
         <meta charset="utf-8">
         <meta name="description" content="Open Source Strategy RPG for the browser">
         <link rel="stylesheet" href="styles/main.css">
-        <script type="text/javascript" src="scripts/htmlOperations.js"></script>
+        <script type="text/javascript" src="scripts/messages.js"></script>
         <script type="text/javascript" src="scripts/game.js"></script>
+        <script type="text/javascript" src="scripts/menu.js"></script>
         <title>Test</title>
     </head>
     <body>
     
         <div id="menu">
-        <ul>
-        <li id="health">Health: 0/0 (100%)</li>
-        <li id="stamina">Stamina: 0/0 (100%)</li>
-        <li class="clickable" id="inventory">Inventory</li>
-        <li class="clickable" id="perception">Look At</li>
-        </ul>
+            <ul>
+                <li id="health">Health: 0/0 (100%)</li>
+                <li id="stamina">Stamina: 0/0 (100%)</li>
+                <li class="clickable" id="inventory">Inventory</li>
+                <li class="clickable" id="perception">Look At</li>
+                <li class="clickable" id="trade">Trade Items</li>
+                <li class="clickable" id="sprint">Sprint</li>
+            </ul>
         </div>
+        
+        <table id="items">
+            <tr>
+                <td id="equipAmmo" class="equipped"></td>
+                <td id="equipHead" class="equipped"></td>
+                <td id="equipNeck" class="equipped"></td>
+                <td rowspan="3">
+                <ul>
+                <li>Item</li>
+                </ul>
+                </td>
+            </tr>
+            <tr>
+                <td id="equipHands" class="equipped"></td>
+                <td id="equipBody" class="equipped"></td>
+                <td id="equipRing" class="equipped"></td>
+            </tr>
+            <tr>
+                <td id="equipRH" class="equipped"></td>
+                <td id="equipFeet" class="equipped"></td>
+                <td id="equipLH" class="equipped"></td>
+            </tr>
+        </table>
         
         <div id="board">
         test
-        <table id="tiles">
+        <table id="mapTiles">
         </table>
         </div>
         
