@@ -20,7 +20,7 @@ function deselectMenuItem() {
     }
 }
 
-function setUpEventListeners() {
+function setUpMenuEventListeners() {
     document.addEventListener("click", doSelectedOrCancel, false);
     document.getElementById("inventory").addEventListener("click", selectInventory, false);
     document.getElementById("perception").addEventListener("click", selectPerception, false);
@@ -33,9 +33,6 @@ function doSelectedOrCancel(event) {
         return;
     }
     switch(selectedMenuItem) {
-        case MENU.INVENTORY:
-            //code block
-            break;
         case MENU.PERCEPTION:
             gameActions.lookAt(event.target.id);
     }
@@ -43,17 +40,9 @@ function doSelectedOrCancel(event) {
 }
 
 function selectInventory() {
-
+    inventory.toggle();
 }
 
 function selectPerception() {
     selectClickableMenuItem(MENU.PERCEPTION);
 }
-
-// Run upon loading
-
-window.onload = function() {
-    
-    setUpEventListeners();
-
-};

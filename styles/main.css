@@ -7,7 +7,7 @@ body {
     color: #FFFFFF;
     margin: 0;
     padding: 0;
-    cursor: default;
+    cursor: url(../images/testcursor.png), auto;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -67,32 +67,16 @@ li#inventory {
     background-image: url(../images/inventory.png);
 }
 
-li#inventory:hover {
-    background-image: url(../images/inventory_hover.png);
-}
-
 li#perception {
     background-image: url(../images/perception.png);
-}
-
-li#perception:hover, li#perceptionSelected {
-    background-image: url(../images/perception_hover.png);
 }
 
 li#trade {
     background-image: url(../images/trade.png);
 }
 
-li#trade:hover, li#tradeSelected {
-    background-image: url(../images/trade_hover.png);
-}
-
 li#sprint {
     background-image: url(../images/sprint.png);
-}
-
-li#sprint:hover, li#sprintSelected {
-    background-image: url(../images/sprint_hover.png);
 }
 
 /* inventory */
