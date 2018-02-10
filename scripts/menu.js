@@ -1,7 +1,7 @@
 var MENU = {
-    NONE: {unselectedId: "", selectedId: ""},
-    INVENTORY: {unselectedId: "inventory", selectedId: "inventorySelected"}, 
-    PERCEPTION: {unselectedId: "perception", selectedId: "perceptionSelected"}
+    NONE: {id: ""},
+    INVENTORY: {id: "inventory"}, 
+    PERCEPTION: {id: "perception"}
 };
 
 var selectedMenuItem = MENU.NONE;
@@ -9,15 +9,14 @@ var selectedMenuItem = MENU.NONE;
 function selectClickableMenuItem(menuItem) {
     if (selectedMenuItem == MENU.NONE) {
         selectedMenuItem = menuItem;
-        document.getElementById(menuItem.unselectedId).id = menuItem.selectedId;
     }
 }
 
 function deselectMenuItem() {
     if (selectedMenuItem != MENU.NONE) {
-        document.getElementById(selectedMenuItem.selectedId).id = selectedMenuItem.unselectedId;
         selectedMenuItem = MENU.NONE;
     }
+    Mouse.hideCursorInfo();
 }
 
 function setUpMenuEventListeners() {
@@ -26,23 +25,22 @@ function setUpMenuEventListeners() {
     document.getElementById("perception").addEventListener("click", selectPerception, false);
 }
 
-// Event Listeners
-
 function doSelectedOrCancel(event) {
-    if (event.target.id == selectedMenuItem.selectedId) {
+    if (event.target.id == selectedMenuItem.id) {
         return;
     }
     switch(selectedMenuItem) {
         case MENU.PERCEPTION:
-            gameActions.lookAt(event.target.id);
+            GameActions.lookAt(event.target.id);
     }
     deselectMenuItem();
 }
 
 function selectInventory() {
-    inventory.toggle();
+    Inventory.toggle();
 }
 
 function selectPerception() {
     selectClickableMenuItem(MENU.PERCEPTION);
+    Mouse.showCursorInfo("Look At");
 }

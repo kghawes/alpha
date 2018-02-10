@@ -1,8 +1,8 @@
-var gameActions = {
+var GameActions = {
     lookAt: function(targetId) {
         switch (targetId) {
             default:
-                messages.addMessage("You see nothing to care about.");
+                Messages.addMessage("You see nothing to care about.");
         }
     }
 };

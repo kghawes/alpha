@@ -1,11 +1,7 @@
 window.onload = function() {
     
-    setDefaultVisibility();
     setUpMenuEventListeners();
-    setUpInventoryEventListeners();
+    Inventory.setup();
+    Mouse.setup();
 
 };
-
-function setDefaultVisibility() {
-    inventory.hide();
-}

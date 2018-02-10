@@ -1,13 +1,22 @@
 @CHARSET "UTF-8";
 
+@font-face {
+    font-family: 'alagardmedium';
+    src: url('alagard-webfont.woff2') format('woff2'),
+         url('alagard-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     background: #000000;
     font-size: small;
-    font-family: courier;
+    font-family: 'alagardmedium', courier, serif;
     color: #FFFFFF;
     margin: 0;
     padding: 0;
-    cursor: url(../images/testcursor.png), auto;
+    cursor: default;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -20,13 +29,24 @@ ul, ul li {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-weight: bold;
 }
 
 table, table tr, table tr td {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+div#cursorInfo {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-size: smaller;
+    color: #000000;
+    background: #FFFFFF;
+    padding: 1px;
+    margin: 1px;
+    border: 1px solid #000000;
 }
 
 /* menu */
@@ -58,9 +78,8 @@ li#stamina {
    background-color: #349E97;
 }
 
-li.clickable:hover, li#perceptionSelected, li#tradeSelected, li#sprintSelected {
-    background: #FFFFFF;
-    color: #000000;
+li.clickable:hover {
+    background: #777777;
 }
 
 li#inventory {

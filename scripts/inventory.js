@@ -1,25 +1,24 @@
-var inventory = {
+var Inventory = {
     toggle: function() {
-        if (document.getElementById("items").style.display) {
-            document.getElementById("items").style.display = "";
+        var items = document.getElementById("items");
+        if (items.style.display) {
+            items.style.display = "";
         }
         else {
-            document.getElementById("items").style.display = "none";
+            items.style.display = "none";
         }
     },
     hide: function() {
         document.getElementById("items").style.display = "none";
+    },
+    setup: function() {
+        Inventory.hide();
+        document.addEventListener("click", function(event) {
+            if (!document.getElementById("items").contains(event.target)
+            && event.target.id != MENU.INVENTORY.id
+            && event.target.id != MENU.PERCEPTION.id) {
+                Inventory.hide();
+            }
+        });
     }
-};
-
-function setUpInventoryEventListeners() {
-    document.addEventListener("click", function(event) {
-        if (!document.getElementById("items").contains(event.target)
-        && event.target.id != MENU.INVENTORY.selectedId
-        && event.target.id != MENU.INVENTORY.unselectedId
-        && event.target.id != MENU.PERCEPTION.selectedId
-        && event.target.id != MENU.PERCEPTION.unselectedId) {
-            inventory.hide();
-        }
-    });
 }
