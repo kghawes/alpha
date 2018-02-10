@@ -11,6 +11,8 @@ LICENSE: Licensed with The GNU General Public License v3.0. See the LICENSE file
 CREDITS: 
 Written and programmed by Kenneth Hawes.
 
+Alagard font by Hewett Tsoi, downloaded from https://www.dafont.com/alagard.font (special thanks to FontSquirrel for web font conversion).
+
 Icon graphics from http://game-icons.net licensed under Creative Commons Attribution 3.0 (CC BY 3.0). Artists include the following:
 * Lorc, http://lorcblog.blogspot.com
 * Delapouite, http://delapouite.com
@@ -44,6 +46,10 @@ Icon graphics from http://game-icons.net licensed under Creative Commons Attribu
 * Various artists, https://commons.wikimedia.org
 
 Thanks to GitHub for hosting the source code.
+
+Thanks to Codenvy for IDE.
+
+Thanks to StackOverflow for programming help.
 
 Special Thanks to the following YouTubers for inspiration and historical information:
 * Skallagrim
